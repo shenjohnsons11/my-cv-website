@@ -571,6 +571,69 @@
 
     </main>
 
+    <!-- ==============================================
+         MODAL XEM CV DẠNG PDF (VI / EN)
+         ============================================== -->
+    <div id="cvModal" class="cv-modal" aria-hidden="true" role="dialog" aria-labelledby="cvModalTitle">
+        <div class="cv-modal-backdrop" id="cvModalBackdrop"></div>
+        <div class="cv-modal-dialog">
+            <div class="cv-modal-header">
+                <div class="cv-modal-title-wrap">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h3 id="cvModalTitle" data-i18n="modal.title">Xem CV dạng PDF</h3>
+                </div>
+                <button type="button" class="cv-modal-close" id="cvModalClose" aria-label="Đóng">&times;</button>
+            </div>
+            <p class="cv-modal-desc" data-i18n="modal.desc">Chọn phiên bản ngôn ngữ bạn muốn xem hoặc tải về (chuẩn 2 trang A4 ToiDiCodeDao):</p>
+            <div class="cv-modal-grid">
+                <!-- Bản Tiếng Việt -->
+                <div class="cv-option-card">
+                    <div class="cv-option-top">
+                        <span class="cv-flag">🇻🇳</span>
+                        <div class="cv-option-info">
+                            <h4 data-i18n="modal.viHeading">Bản Tiếng Việt (PDF)</h4>
+                            <span class="cv-badge" data-i18n="modal.viBadge">A4 • 2 trang</span>
+                        </div>
+                    </div>
+                    <p class="cv-option-desc" data-i18n="modal.viDesc">Định dạng tiếng Việt, phù hợp cho nhà tuyển dụng tại Việt Nam.</p>
+                    <div class="cv-option-actions">
+                        <a href="LoiHoangNguyen_MobileDeveloper_VI.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="modal.btnView">Xem trực tuyến</span>
+                        </a>
+                        <a href="LoiHoangNguyen_MobileDeveloper_VI.pdf" download="LoiHoangNguyen_MobileDeveloper_VI.pdf" class="btn btn-outline btn-sm">
+                            <i class="fa-solid fa-download"></i> <span data-i18n="modal.btnDownload">Tải về</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bản Tiếng Anh -->
+                <div class="cv-option-card">
+                    <div class="cv-option-top">
+                        <span class="cv-flag">🇬🇧</span>
+                        <div class="cv-option-info">
+                            <h4 data-i18n="modal.enHeading">Bản Tiếng Anh (PDF)</h4>
+                            <span class="cv-badge" data-i18n="modal.enBadge">A4 • 2 trang</span>
+                        </div>
+                    </div>
+                    <p class="cv-option-desc" data-i18n="modal.enDesc">Định dạng tiếng Anh, phù hợp cho công ty đa quốc gia.</p>
+                    <div class="cv-option-actions">
+                        <a href="LoiHoangNguyen_MobileDeveloper_EN.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="modal.btnView">Xem trực tuyến</span>
+                        </a>
+                        <a href="LoiHoangNguyen_MobileDeveloper_EN.pdf" download="LoiHoangNguyen_MobileDeveloper_EN.pdf" class="btn btn-outline btn-sm">
+                            <i class="fa-solid fa-download"></i> <span data-i18n="modal.btnDownload">Tải về</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cv-modal-footer">
+                <button type="button" id="modalPrintQuickBtn" class="btn-text-link">
+                    <i class="fa-solid fa-print"></i> <span data-i18n="modal.quickPrint">Hoặc in trực tiếp giao diện website này (Print A4)</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Nút cuộn nhanh lên đầu trang -->
     <a href="#top" id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
         <i class="fa-solid fa-arrow-up"></i>

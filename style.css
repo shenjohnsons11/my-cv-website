@@ -1418,6 +1418,209 @@ body,
 }
 
 /* ==========================================================================
+   9.8. CV PDF MODAL (CHỌN XEM CV VI / EN)
+   ========================================================================== */
+.cv-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+
+.cv-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cv-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.68);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.cv-modal-dialog {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 640px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: var(--shadow-lg);
+    transform: scale(0.92) translateY(14px);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.cv-modal.active .cv-modal-dialog {
+    transform: scale(1) translateY(0);
+}
+
+.cv-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.cv-modal-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cv-modal-title-wrap i {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.cv-modal-title-wrap h3 {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.cv-modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.cv-modal-close:hover {
+    color: var(--text-primary);
+    background-color: var(--primary-light);
+}
+
+.cv-modal-desc {
+    color: var(--text-secondary);
+    font-size: 0.93rem;
+    margin-bottom: 22px;
+}
+
+.cv-modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.cv-option-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.cv-option-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.cv-option-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.cv-flag {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.cv-option-info h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.cv-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.cv-option-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.cv-option-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-sm {
+    padding: 8px 14px;
+    font-size: 0.86rem;
+    justify-content: center;
+}
+
+.cv-modal-footer {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.btn-text-link {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-text-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .cv-modal-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .cv-modal-dialog {
+        padding: 20px 16px;
+    }
+}
+
+/* ==========================================================================
    10. PRINT / EXPORT PDF (ĐỊNH DẠNG CHUẨN A4 KHI XUẤT PDF)
    ========================================================================== */
 @page {
@@ -1473,7 +1676,8 @@ body,
     .about-avatar-card,
     #contact,
     .site-footer,
-    .back-to-top {
+    .back-to-top,
+    .cv-modal {
         display: none !important;
     }
 

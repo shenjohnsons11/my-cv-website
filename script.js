@@ -177,7 +177,18 @@ const translations = {
         'form.msgPlaceholder': 'Thông tin công việc hoặc lịch hẹn phỏng vấn...',
         'form.submit': 'Gửi tin nhắn',
         'form.alert': 'Cảm ơn bạn đã để lại lời nhắn! Nguyên sẽ phản hồi qua email trong thời gian sớm nhất.',
-        'footer.name': 'Lợi Hoàng Nguyên'
+        'footer.name': 'Lợi Hoàng Nguyên',
+        'modal.title': 'Xem CV dạng PDF',
+        'modal.desc': 'Chọn phiên bản ngôn ngữ bạn muốn xem hoặc tải về (chuẩn 2 trang A4 ToiDiCodeDao):',
+        'modal.viHeading': 'Bản Tiếng Việt (PDF)',
+        'modal.viBadge': 'A4 • 2 trang',
+        'modal.viDesc': 'Định dạng tiếng Việt, phù hợp cho nhà tuyển dụng tại Việt Nam.',
+        'modal.enHeading': 'Bản Tiếng Anh (PDF)',
+        'modal.enBadge': 'A4 • 2 trang',
+        'modal.enDesc': 'Định dạng tiếng Anh, phù hợp cho công ty đa quốc gia.',
+        'modal.btnView': 'Xem trực tuyến',
+        'modal.btnDownload': 'Tải về',
+        'modal.quickPrint': 'Hoặc in trực tiếp giao diện website này (Print A4)'
     },
     en: {
         pageTitle: 'Loi Hoang Nguyen - Mobile Developer (Intern / Junior) CV',
@@ -286,7 +297,18 @@ const translations = {
         'form.msgPlaceholder': 'Job details or interview schedule...',
         'form.submit': 'Send Message',
         'form.alert': 'Thanks for your message! I will get back to you via email as soon as possible.',
-        'footer.name': 'Loi Hoang Nguyen'
+        'footer.name': 'Loi Hoang Nguyen',
+        'modal.title': 'View CV as PDF',
+        'modal.desc': 'Select the language version you want to view or download (standard 2-page A4 format):',
+        'modal.viHeading': 'Vietnamese Version (PDF)',
+        'modal.viBadge': 'A4 • 2 pages',
+        'modal.viDesc': 'Vietnamese layout, optimized for local tech companies.',
+        'modal.enHeading': 'English Version (PDF)',
+        'modal.enBadge': 'A4 • 2 pages',
+        'modal.enDesc': 'English layout, tailored for international and foreign teams.',
+        'modal.btnView': 'View Online',
+        'modal.btnDownload': 'Download',
+        'modal.quickPrint': 'Or print this website directly (Print A4)'
     }
 };
 
@@ -420,11 +442,58 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 // Áp dụng ngôn ngữ đã lưu khi tải trang
 applyLanguage(currentLang);
 
-// Xem / Xuất CV dạng PDF theo đúng ngôn ngữ đang chọn
+// ==========================================================================
+// MODAL XEM CV DẠNG PDF (VI / EN)
+// ==========================================================================
+const cvModal = document.getElementById('cvModal');
 const printCvBtn = document.getElementById('printCvBtn');
+const cvModalClose = document.getElementById('cvModalClose');
+const cvModalBackdrop = document.getElementById('cvModalBackdrop');
+const modalPrintQuickBtn = document.getElementById('modalPrintQuickBtn');
+
+function openCvModal() {
+    if (cvModal) {
+        cvModal.classList.add('active');
+        cvModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeCvModal() {
+    if (cvModal) {
+        cvModal.classList.remove('active');
+        cvModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+}
+
 if (printCvBtn) {
-    printCvBtn.addEventListener('click', () => {
-        window.print();
+    printCvBtn.addEventListener('click', e => {
+        e.preventDefault();
+        openCvModal();
+    });
+}
+
+if (cvModalClose) {
+    cvModalClose.addEventListener('click', closeCvModal);
+}
+
+if (cvModalBackdrop) {
+    cvModalBackdrop.addEventListener('click', closeCvModal);
+}
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && cvModal && cvModal.classList.contains('active')) {
+        closeCvModal();
+    }
+});
+
+if (modalPrintQuickBtn) {
+    modalPrintQuickBtn.addEventListener('click', () => {
+        closeCvModal();
+        setTimeout(() => {
+            window.print();
+        }, 200);
     });
 }
 
