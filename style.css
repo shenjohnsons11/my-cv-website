@@ -826,12 +826,21 @@ img {
 
 .project-shot-img-wrap {
     width: 100%;
-    height: 150px;
+    height: 190px;
     overflow: hidden;
     background: #eef4f2;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 6px;
+}
+
+.project-shot-featured {
+    grid-column: 1 / -1;
+}
+
+.project-shot-featured .project-shot-img-wrap {
+    height: 250px;
 }
 
 [data-theme="dark"] .project-shot-img-wrap {
@@ -841,8 +850,7 @@ img {
 .project-shot-img-wrap img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top center;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
