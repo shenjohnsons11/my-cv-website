@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lợi Hoàng Nguyên - Mobile Developer (Intern / Junior) CV</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/code.svg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Raleway:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+    <!-- ==============================================
+         1. THANH ĐIỀU HƯỚNG TRÁI / SIDEBAR NAVIGATION
+         ============================================== -->
+    <nav id="site-navigation" class="sidebar-nav" aria-label="Main Navigation">
+        <div class="nav-brand">
+            <a href="#top" class="brand-logo" title="Về đầu trang" data-i18n-title="nav.backTopTitle">
+                <span class="logo-text">LN</span>
+            </a>
+            <button class="mobile-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li class="nav-item">
+                <a href="#top" class="nav-link active">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="nav-label">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="nav-label">About</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#work-experience" class="nav-link">
+                    <i class="fa-solid fa-building"></i>
+                    <span class="nav-label">Experience</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#skills" class="nav-link">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span class="nav-label">Skills</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#experiences" class="nav-link">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span class="nav-label">Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#education" class="nav-link">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span class="nav-label">Education</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="nav-label">Contact</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Nút chuyển đổi ngôn ngữ VIE / ENG -->
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-btn active" data-lang="vi">VIE</button>
+            <button type="button" class="lang-btn" data-lang="en">ENG</button>
+        </div>
+    </nav>
+
+    <!-- KHUNG NỘI DUNG CHÍNH (BÊN PHẢI SIDEBAR) -->
+    <main class="main-content">
+
+        <!-- ==============================================
+             2. BANNER / HERO HEADER
+             ============================================== -->
+        <header id="banner" class="hero-header">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="hero-greeting" data-i18n="hero.greeting">Xin chào, tôi là</p>
+                    <h1 class="hero-name" data-i18n="hero.name">Lợi Hoàng Nguyên</h1>
+                    <h2 class="hero-slogan" data-i18n="hero.slogan">Intern / Junior Mobile Developer (React Native)</h2>
+                    <p class="hero-tagline" data-i18n="hero.tagline">Tốt nghiệp chuyên ngành Lập trình Mobile đa nền tảng tại FPT Polytechnic. Đã có kinh nghiệm thực tập Front-end Mobile Developer (React Native CLI) tại ClinicPro và các đồ án thực tế với Expo, Node.js.</p>
+                    
+                    <!-- Mạng xã hội / Profile links -->
+                    <div class="social-links">
+                        <a href="https://github.com/shenjohnsons11" target="_blank" rel="noopener" class="social-btn" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:shenjohnsons11@gmail.com" class="social-btn" title="Email" data-i18n-title="hero.emailTitle">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" title="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down" aria-label="Cuộn xuống">
+                <i class="fa-solid fa-angles-down"></i>
+            </a>
+        </header>
+
+        <!-- ==============================================
+             3. GIỚI THIỆU BẢN THÂN / ABOUT ME
+             ============================================== -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">ABOUT ME</h2>
+                    <span class="section-subtitle" data-i18n="about.subtitle">Giới thiệu &amp; Mục tiêu nghề nghiệp</span>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Ảnh chân dung / Avatar -->
+                    <div class="about-avatar-card">
+                        <div class="avatar-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Lợi Hoàng Nguyên Avatar" class="avatar-img">
+                        </div>
+                        <div class="avatar-badge">
+                            <span class="badge-exp">Intern / Junior</span>
+                            <span class="badge-text">Mobile Developer</span>
+                        </div>
+                    </div>
+
+                    <!-- Tóm tắt giới thiệu / Summary -->
+                    <div class="about-summary-card">
+                        <h3 class="card-title" data-i18n="about.cardTitle">Giới thiệu ngắn</h3>
+                        <div class="summary-body">
+                            <p data-i18n-html="about.p1">
+                                Tôi là <strong>Lợi Hoàng Nguyên</strong>, tốt nghiệp chuyên ngành <strong>Lập trình Mobile đa nền tảng</strong> tại <strong>FPT Polytechnic</strong> và từng thực tập vị trí <strong>Front-end Mobile Developer</strong> tại Công ty TNHH ClinicPro. Hiện tại tôi đang tìm kiếm cơ hội ở vị trí <strong>Intern hoặc Junior Mobile Developer</strong>.
+                            </p>
+                            <p data-i18n-html="about.p2">
+                                Thế mạnh hiện tại của tôi nằm ở <strong>React Native (CLI &amp; Expo SDK)</strong> và hệ sinh thái JavaScript/TypeScript. Từ dự án thực tập đến đồ án tốt nghiệp, tôi trực tiếp xây dựng giao diện Android/iOS, cấu hình React Navigation, tối ưu FlatList, kết nối RESTful API (Axios, JWT, Socket.io) và kiểm thử trực tiếp trên thiết bị thật.
+                            </p>
+                            <p data-i18n-html="about.p3">
+                                Trong các đồ án nhóm, tôi thường phụ trách dựng khung source code ban đầu, chia đầu việc theo từng module và review pull request cùng các bạn. Tôi thích làm sản phẩm chạy ổn định, dễ đọc code và sẵn sàng học hỏi các quy chuẩn kỹ thuật từ anh chị đi trước.
+                            </p>
+                        </div>
+                        <div class="summary-actions">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fa-solid fa-paper-plane"></i> <span data-i18n="about.btnContact">Liên hệ phỏng vấn</span>
+                            </a>
+                            <a href="#experiences" class="btn btn-outline">
+                                <i class="fa-solid fa-diagram-project"></i> <span data-i18n="about.btnProjects">Xem dự án đã làm</span>
+                            </a>
+                            <button type="button" id="printCvBtn" class="btn btn-outline">
+                                <i class="fa-solid fa-file-pdf"></i> <span data-i18n="about.btnPdf">Xem CV dạng PDF</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Thông tin liên hệ nhanh / Quick Contact -->
+                    <div class="about-contact-card">
+                        <h3 class="card-title" data-i18n="info.cardTitle">Thông tin cá nhân</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <div class="icon-box"><i class="fa-solid fa-user-tag"></i></div>
+                                <div>
+                                    <span class="c-label" data-i18n="info.nameLabel">Họ và tên:</span>
+                                    <span class="c-val" data-i18n="info.nameVal">Lợi Hoàng Nguyên</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <span class="c-label" data-i18n="info.locationLabel">Khu vực:</span>
+                                    <span class="c-val" data-i18n="info.locationVal">TP. Hồ Chí Minh, Việt Nam</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <span class="c-label">Email:</span>
+                                    <span class="c-val"><a href="mailto:shenjohnsons11@gmail.com">shenjohnsons11@gmail.com</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box"><i class="fa-brands fa-github"></i></div>
+                                <div>
+                                    <span class="c-label">GitHub:</span>
+                                    <span class="c-val"><a href="https://github.com/shenjohnsons11" target="_blank" rel="noopener">github.com/shenjohnsons11</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box"><i class="fa-solid fa-calendar-check"></i></div>
+                                <div>
+                                    <span class="c-label" data-i18n="info.statusLabel">Trạng thái:</span>
+                                    <span class="c-val text-success" data-i18n="info.statusVal">Sẵn sàng đi làm / thực tập</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             4. KINH NGHIỆM LÀM VIỆC / WORK EXPERIENCE
+             ============================================== -->
+        <section id="work-experience" class="section bg-light">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">WORK EXPERIENCE</h2>
+                    <span class="section-subtitle" data-i18n="work.subtitle">Kinh nghiệm làm việc thực tế tại doanh nghiệp</span>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-role">
+                            <h3 class="role-title" data-i18n="work.w1.role">Thực tập sinh Mobile Developer (Front-end)</h3>
+                            <h4 class="company-name" data-i18n="work.w1.company">Công ty TNHH ClinicPro</h4>
+                            <span class="badge badge-primary" data-i18n="work.w1.badge">Thực Tập Doanh Nghiệp</span>
+                        </div>
+                        <div class="timeline-time badge-teal">
+                            <span>05/2026 - 07/2026</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="project-name" data-i18n="work.w1.heading">Ứng Dụng Di Động Quản Lý Phòng Khám &amp; Đặt Lịch Khám (Android / iOS)</h4>
+                            <p class="project-desc" data-i18n="work.w1.desc">Tham gia phát triển ứng dụng di động cho lĩnh vực y tế (đặt lịch khám, tra cứu bác sĩ, hồ sơ bệnh án EMR và giỏ thuốc) trên nền tảng React Native CLI kết nối hệ thống backend Node.js / MySQL.</p>
+                            <ul class="task-list">
+                                <li data-i18n-html="work.w1.t1"><strong>Phát triển giao diện &amp; điều hướng:</strong> Xây dựng các màn hình đăng nhập/đăng ký, danh sách bác sĩ/chuyên khoa, form đặt/hủy lịch khám, giỏ thuốc và hồ sơ bệnh án bằng React Native CLI, Flexbox và React Navigation (Stack/Tab Navigator).</li>
+                                <li data-i18n-html="work.w1.t2"><strong>Tích hợp API &amp; Tối ưu hiển thị:</strong> Kết nối RESTful API (Node.js/MySQL) qua Axios, xử lý trạng thái loading/error, tìm kiếm/lọc/sắp xếp dữ liệu và tối ưu hiệu năng danh sách bằng FlatList.</li>
+                                <li data-i18n-html="work.w1.t3"><strong>Kiểm thử thiết bị thật &amp; Build APK:</strong> Kiểm thử đa thiết bị trên Android (kể cả thiết bị đời cũ và màn hình tai thỏ) và iOS, theo dõi RAM/hiệu năng, đóng gói file APK test/release và phối hợp nhóm qua Git.</li>
+                                <li data-i18n-html="work.w1.t4"><strong>Cải tiến UI/UX theo phản hồi thực tế:</strong> Tiếp nhận góp ý từ mentor và phản hồi sử dụng thực tế của bác sĩ/người dùng tại phòng khám để điều chỉnh luồng thao tác và giao diện gọn hơn.</li>
+                                <li data-i18n-html="work.w1.t5"><strong>Công nghệ:</strong> React Native CLI, React Navigation, Axios, Flexbox, FlatList, Node.js, MySQL, Postman, Git.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             5. KỸ NĂNG CHUYÊN MÔN / SKILLS
+             ============================================== -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">SKILLS</h2>
+                    <span class="section-subtitle" data-i18n="skills.subtitle">Công nghệ và công cụ đã sử dụng qua các dự án</span>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Khối 1: Mobile Development (Trọng tâm) -->
+                    <div class="skill-box">
+                        <div class="box-header">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <h3 class="box-title" data-i18n="skills.b1.title">Mobile Development (Trọng tâm)</h3>
+                        </div>
+                        <ul class="skill-items">
+                            <li data-i18n-html="skills.b1.i1"><strong>Framework:</strong> React Native (CLI &amp; Expo SDK), React Navigation (Stack/Tab)</li>
+                            <li data-i18n-html="skills.b1.i2"><strong>Tối ưu &amp; Thiết bị:</strong> FlatList optimization, Flexbox, Expo Camera (quét/OCR), Push Notifications</li>
+                            <li data-i18n-html="skills.b1.i3"><strong>State &amp; Mạng:</strong> Axios, Zustand, Context API, Light/Dark Theme, Lottie</li>
+                            <li data-i18n-html="skills.b1.i4"><strong>Build &amp; Test:</strong> Đóng gói APK Android, test thiết bị thật (Android / iOS), JavaScript (ES6+), TypeScript</li>
+                        </ul>
+                    </div>
+
+                    <!-- Khối 2: Web & Frontend -->
+                    <div class="skill-box">
+                        <div class="box-header">
+                            <i class="fa-solid fa-code"></i>
+                            <h3 class="box-title" data-i18n="skills.b2.title">Web &amp; Frontend</h3>
+                        </div>
+                        <ul class="skill-items">
+                            <li data-i18n-html="skills.b2.i1"><strong>Framework:</strong> Next.js (App Router), React.js</li>
+                            <li data-i18n-html="skills.b2.i2"><strong>Giao diện:</strong> HTML5, CSS3, Tailwind CSS, Responsive Layout</li>
+                            <li data-i18n-html="skills.b2.i3"><strong>Nền tảng bổ trợ:</strong> Java Core (OOP), Java Swing (đồ án desktop)</li>
+                            <li data-i18n-html="skills.b2.i4"><strong>Tiện ích trình duyệt:</strong> Chrome Extensions API (Manifest &amp; Messaging)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Khối 3: Backend, Database & API -->
+                    <div class="skill-box">
+                        <div class="box-header">
+                            <i class="fa-solid fa-server"></i>
+                            <h3 class="box-title" data-i18n="skills.b3.title">Backend, Database &amp; API</h3>
+                        </div>
+                        <ul class="skill-items">
+                            <li data-i18n-html="skills.b3.i1"><strong>Backend:</strong> Node.js, Express.js (RESTful APIs), Python</li>
+                            <li data-i18n-html="skills.b3.i2"><strong>Cơ sở dữ liệu:</strong> MongoDB (Mongoose), SQLite3, MS SQL Server, MySQL</li>
+                            <li data-i18n-html="skills.b3.i3"><strong>Realtime &amp; Thanh toán:</strong> Socket.io, VietQR API, VNPay Sandbox</li>
+                            <li data-i18n-html="skills.b3.i4"><strong>Xác thực &amp; AI API:</strong> JWT, phân quyền Role (Chủ trọ / Người thuê), OTP, Google Gemini / OpenAI API</li>
+                        </ul>
+                    </div>
+
+                    <!-- Khối 4: Quy trình & Công cụ -->
+                    <div class="skill-box">
+                        <div class="box-header">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <h3 class="box-title" data-i18n="skills.b4.title">Quy trình &amp; Công cụ</h3>
+                        </div>
+                        <ul class="skill-items">
+                            <li data-i18n-html="skills.b4.i1"><strong>Quản lý mã nguồn:</strong> Git, GitHub (branching, Pull Request, review code cơ bản)</li>
+                            <li data-i18n-html="skills.b4.i2"><strong>Làm việc nhóm:</strong> Chia task theo module, thống nhất quy chuẩn API &amp; đặt tên cho đồ án</li>
+                            <li data-i18n-html="skills.b4.i3"><strong>Thiết kế &amp; Kiểm thử API:</strong> Postman, Draw.io (ERD, Use Case)</li>
+                            <li data-i18n-html="skills.b4.i4"><strong>Môi trường làm việc:</strong> VS Code, NetBeans, macOS, Terminal cơ bản</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             6. DỰ ÁN / PROJECTS
+             ============================================== -->
+        <section id="experiences" class="section bg-light">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">PROJECTS</h2>
+                    <span class="section-subtitle" data-i18n="projects.subtitle">Các dự án tốt nghiệp, cá nhân và đồ án môn học đã thực hiện</span>
+                </div>
+
+                <div class="timeline">
+                    <!-- Dự án 1: TroHub Platform -->
+                    <div class="timeline-item">
+                        <div class="timeline-role">
+                            <h3 class="role-title" data-i18n="projects.p1.role">Mobile Developer (React Native) &amp; Điều phối nhóm</h3>
+                            <h4 class="company-name" data-i18n="projects.p1.name">TroHub - Ứng Dụng Quản Lý Nhà Trọ</h4>
+                            <span class="badge badge-primary" data-i18n="projects.p1.badge">Đồ Án Tốt Nghiệp</span>
+                        </div>
+                        <div class="timeline-time badge-teal">
+                            <span>05/2026 - 08/2026</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="project-name" data-i18n="projects.p1.heading">Mobile App (React Native / Expo), WebAdmin &amp; Backend</h4>
+                            <p class="project-desc" data-i18n="projects.p1.desc">Ứng dụng hỗ trợ chủ trọ và người thuê quản lý phòng, hợp đồng, hóa đơn điện nước và thanh toán qua VietQR trên nền tảng di động và web.</p>
+                            <ul class="task-list">
+                                <li data-i18n-html="projects.p1.t1"><strong>Phát triển Mobile App:</strong> Xây dựng giao diện và luồng nghiệp vụ bằng React Native (Expo SDK), hỗ trợ Light/Dark Theme và đồng bộ 8 module chức năng với trang WebAdmin.</li>
+                                <li data-i18n-html="projects.p1.t2"><strong>Tích hợp Camera OCR &amp; AI:</strong> Dùng Expo Camera hỗ trợ quét chỉ số công tơ điện nước và kết nối Google Gemini API làm trợ lý gợi ý thao tác cho chủ trọ.</li>
+                                <li data-i18n-html="projects.p1.t3"><strong>Backend &amp; Realtime:</strong> Tham gia xây dựng RESTful API bằng Node.js, Express, MongoDB (Mongoose), xác thực JWT, phân quyền Chủ trọ / Người thuê, thông báo realtime qua Socket.io và tạo mã thanh toán VietQR.</li>
+                                <li data-i18n-html="projects.p1.t4"><strong>Phối hợp nhóm:</strong> Thiết kế ERD ban đầu, soạn tài liệu quy chuẩn kỹ thuật chung cho nhóm, chia đầu việc theo module và rà soát Pull Request trước khi merge.</li>
+                                <li data-i18n-html="projects.p1.t5"><strong>Công nghệ:</strong> React Native, Expo, Next.js, Node.js, Express, MongoDB, Socket.io, Gemini API, VietQR.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Dự án 2: Social Post Curator -->
+                    <div class="timeline-item">
+                        <div class="timeline-role">
+                            <h3 class="role-title" data-i18n="projects.p2.role">Lập trình viên cá nhân (Solo Project)</h3>
+                            <h4 class="company-name">Social Post Curator &amp; Extension</h4>
+                            <span class="badge badge-secondary" data-i18n="projects.p2.badge">Dự Án Cá Nhân</span>
+                        </div>
+                        <div class="timeline-time badge-orange">
+                            <span>09/2026 - 11/2026</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="project-name" data-i18n="projects.p2.heading">Ứng dụng Lưu Trữ, Phân Loại Bài Viết &amp; Chrome Extension</h4>
+                            <p class="project-desc" data-i18n="projects.p2.desc">Công cụ chạy cục bộ giúp lưu bài viết từ mạng xã hội (Facebook, LinkedIn, X) thông qua Chrome Extension, lưu trữ trên máy và hỗ trợ tìm kiếm, tóm tắt bằng AI.</p>
+                            <ul class="task-list">
+                                <li data-i18n-html="projects.p2.t1"><strong>Backend cục bộ:</strong> Viết bằng Python và SQLite3 để lưu nội dung bài viết và tệp đính kèm trực tiếp trên máy cá nhân.</li>
+                                <li data-i18n-html="projects.p2.t2"><strong>Chrome Extension:</strong> Phát triển tiện ích trình duyệt kết nối với backend cục bộ qua mã ghép nối để lưu nhanh bài viết đang xem.</li>
+                                <li data-i18n-html="projects.p2.t3"><strong>Tích hợp AI:</strong> Hỗ trợ cấu hình OpenAI và Google Gemini (Flash &amp; Embedding) để tóm tắt nội dung và trích xuất từ khóa tìm kiếm.</li>
+                                <li data-i18n-html="projects.p2.t4"><strong>Công nghệ:</strong> Python, SQLite3, Chrome Extensions API, OpenAI / Gemini API.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Dự án 3: Các đồ án Java / NetBeans tại FPT Polytechnic -->
+                    <div class="timeline-item">
+                        <div class="timeline-role">
+                            <h3 class="role-title" data-i18n="projects.p3.role">Thành viên &amp; Hỗ trợ nhóm môn học</h3>
+                            <h4 class="company-name" data-i18n="projects.p3.name">Đồ Án Lập Trình Java &amp; Cơ Sở Dữ Liệu</h4>
+                            <span class="badge badge-purple" data-i18n="projects.p3.badge">Đồ Án Môn Học</span>
+                        </div>
+                        <div class="timeline-time badge-purple">
+                            <span>2024 - 2025</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="project-name" data-i18n="projects.p3.heading">Ứng dụng Quản lý Bán hàng (Java Swing &amp; SQL Server)</h4>
+                            <p class="project-desc" data-i18n="projects.p3.desc">Các đồ án môn học tại FPT Polytechnic (Java 1, Java 2, Dự án mẫu) xây dựng ứng dụng desktop kết nối cơ sở dữ liệu SQL Server.</p>
+                            <ul class="task-list">
+                                <li data-i18n-html="projects.p3.t1"><strong>Thực hiện chức năng:</strong> Cùng nhóm xây dựng giao diện Java Swing và xử lý các luồng CRUD kết nối Microsoft SQL Server qua JDBC.</li>
+                                <li data-i18n-html="projects.p3.t2"><strong>Kiến thức nền tảng:</strong> Rèn luyện lập trình hướng đối tượng (OOP), mô hình MVC, thiết kế bảng quan hệ và xử lý ngoại lệ.</li>
+                                <li data-i18n-html="projects.p3.t3"><strong>Công nghệ:</strong> Java Core, Java Swing, JDBC, MS SQL Server, NetBeans.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             7. HỌC VẤN / EDUCATION
+             ============================================== -->
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">EDUCATION</h2>
+                    <span class="section-subtitle" data-i18n="edu.subtitle">Quá trình học tập chuyên môn</span>
+                </div>
+
+                <div class="education-grid">
+                    <!-- Trường 1: FPT Polytechnic -->
+                    <div class="edu-card">
+                        <div class="edu-period badge-orange">
+                            <div class="school-icon-badge">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <span data-i18n="edu.e1.status">Đã tốt nghiệp</span>
+                        </div>
+                        <div class="edu-info">
+                            <div class="school-header">
+                                <h3 class="edu-degree" data-i18n="edu.e1.degree">Chuyên ngành Lập trình Mobile đa nền tảng</h3>
+                                <div class="school-brand">
+                                    <span class="school-logo fpt-logo">FPT</span>
+                                    <h4 class="edu-school" data-i18n="edu.e1.school">Trường Cao đẳng FPT Polytechnic</h4>
+                                </div>
+                            </div>
+                            <ul class="edu-details">
+                                <li data-i18n="edu.e1.d1">Hoàn thành chương trình đào tạo thực hành về lập trình Web, Java OOP, cơ sở dữ liệu và quy trình làm việc nhóm theo Agile/Scrum.</li>
+                                <li data-i18n="edu.e1.d2">Thực hiện các đồ án môn học và đồ án tốt nghiệp với sản phẩm thực tế, tập trung vào mảng phát triển ứng dụng di động (React Native) và API.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Trường 2: NIIE (Viện Đào Tạo Quốc Tế NTTU) -->
+                    <div class="edu-card">
+                        <div class="edu-period badge-teal">
+                            <div class="school-icon-badge">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <span data-i18n="edu.e2.status">Từng theo học</span>
+                        </div>
+                        <div class="edu-info">
+                            <div class="school-header">
+                                <h3 class="edu-degree" data-i18n="edu.e2.degree">Chương trình Đào tạo Quốc tế (Ngành CNTT)</h3>
+                                <div class="school-brand">
+                                    <span class="school-logo niie-logo">NIIE</span>
+                                    <h4 class="edu-school" data-i18n="edu.e2.school">NIIE - Viện Đào Tạo Quốc Tế (ĐH Nguyễn Tất Thành)</h4>
+                                </div>
+                            </div>
+                            <ul class="edu-details">
+                                <li data-i18n="edu.e2.d1">Theo học giai đoạn nền tảng trong môi trường sử dụng tài liệu tiếng Anh trước khi chuyển hướng sang học thực hành chuyên sâu tại FPT Polytechnic.</li>
+                                <li data-i18n="edu.e2.d2">Rèn luyện thói quen đọc hiểu tài liệu kỹ thuật tiếng Anh, làm việc nhóm và tìm hiểu các kiến thức nền tảng về công nghệ thông tin.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             8. LIÊN HỆ / CONTACT SECTION
+             ============================================== -->
+        <section id="contact" class="section bg-light">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">GET IN TOUCH</h2>
+                    <span class="section-subtitle" data-i18n="contact.subtitle">Nếu anh/chị đang tìm Intern hoặc Junior Mobile Developer (React Native), rất mong có cơ hội trao đổi thêm.</span>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-panel">
+                        <h3 data-i18n="contact.panelTitle">Thông tin liên hệ</h3>
+                        <p data-i18n-html="contact.panelDesc">Tôi sẵn sàng trao đổi và phỏng vấn cho vị trí <strong>Intern / Junior Mobile Developer</strong> (React Native) hoặc các vị trí Frontend liên quan.</p>
+                        
+                        <div class="c-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4 data-i18n="contact.emailLabel">Email cá nhân</h4>
+                                <p><a href="mailto:shenjohnsons11@gmail.com">shenjohnsons11@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="c-item">
+                            <i class="fa-brands fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p><a href="https://github.com/shenjohnsons11" target="_blank" rel="noopener">github.com/shenjohnsons11</a></p>
+                            </div>
+                        </div>
+
+                        <div class="c-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4 data-i18n="contact.locationLabel">Địa điểm làm việc</h4>
+                                <p data-i18n="contact.locationVal">TP. Hồ Chí Minh (Sẵn sàng Onsite / Hybrid)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form.nameLabel">Họ và tên / Công ty *</label>
+                            <input type="text" id="name" required placeholder="Ví dụ: Nguyễn Văn A - Công ty ABC" data-i18n-placeholder="form.namePlaceholder">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="form.emailLabel">Email liên hệ *</label>
+                            <input type="email" id="email" required placeholder="hr@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-i18n="form.subjectLabel">Vị trí tuyển dụng / Chủ đề</label>
+                            <input type="text" id="subject" placeholder="Intern / Junior Mobile Developer...">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="form.msgLabel">Nội dung tin nhắn *</label>
+                            <textarea id="message" rows="4" required placeholder="Thông tin công việc hoặc lịch hẹn phỏng vấn..." data-i18n-placeholder="form.msgPlaceholder"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fa-solid fa-paper-plane"></i> <span data-i18n="form.submit">Gửi tin nhắn</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             8. CHÂN TRANG / FOOTER
+             ============================================== -->
+        <footer class="site-footer">
+            <div class="container footer-content">
+                <p class="copyright">
+                    © <span id="currentYear"></span> <strong data-i18n="footer.name">Lợi Hoàng Nguyên</strong>. All Rights Reserved.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://github.com/shenjohnsons11" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:shenjohnsons11@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <p class="credit" data-i18n="footer.credit">Layout tham khảo từ cv.toidicodedao.com.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Nút cuộn nhanh lên đầu trang -->
+    <a href="#top" id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
