@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loi Hoang Nguyen - Mobile Developer (EN)</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 12mm 16mm;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Calibri", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            font-size: 9.8pt;
+            line-height: 1.36;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .cv-container {
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        /* Centered Header - ToiDiCodeDao Style */
+        .cv-header {
+            text-align: center;
+            margin-bottom: 14px;
+        }
+
+        .cv-name {
+            font-size: 14.5pt;
+            font-weight: 700;
+            color: #111111;
+            margin-bottom: 2px;
+        }
+
+        .cv-role {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #222222;
+            margin-bottom: 3px;
+        }
+
+        .cv-contact-line {
+            font-size: 10pt;
+            color: #222222;
+            line-height: 1.38;
+        }
+
+        .cv-contact-line a {
+            color: #1155cc;
+            text-decoration: underline;
+        }
+
+        /* Section Titles */
+        .cv-section {
+            margin-top: 10px;
+        }
+
+        .section-heading {
+            font-size: 10.6pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: #111111;
+            border-bottom: 1.5px solid #222222;
+            padding-bottom: 2px;
+            margin-bottom: 6px;
+        }
+
+        /* Summary */
+        .summary-p {
+            text-indent: 24px;
+            margin-bottom: 6px;
+            text-align: justify;
+        }
+
+        /* Technical Skills - 2 Columns */
+        .skills-columns {
+            display: grid;
+            grid-template-columns: 1.08fr 0.92fr;
+            gap: 24px;
+        }
+
+        .skill-cat-list {
+            list-style: none;
+        }
+
+        .skill-cat-item {
+            margin-bottom: 6px;
+        }
+
+        .skill-cat-title {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .skill-cat-title::before {
+            content: "• ";
+            margin-right: 4px;
+        }
+
+        .skill-sublist {
+            list-style: none;
+            padding-left: 18px;
+        }
+
+        .skill-sublist li::before {
+            content: "- ";
+            margin-right: 4px;
+        }
+
+        /* Entries (Education, Experience, Projects) */
+        .entry {
+            margin-bottom: 7px;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .entry-org {
+            font-weight: 700;
+            font-size: 10.4pt;
+            color: #111111;
+        }
+
+        .entry-date {
+            font-size: 10pt;
+            color: #222222;
+            white-space: nowrap;
+        }
+
+        .entry-meta {
+            font-size: 10pt;
+            margin-top: 1px;
+        }
+
+        .entry-meta strong {
+            font-weight: 700;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding-left: 16px;
+            margin-top: 3px;
+        }
+
+        .bullet-list > li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 2.5px;
+        }
+
+        .bullet-list > li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 700;
+        }
+
+        .sub-lines {
+            list-style: none;
+            padding-left: 18px;
+            margin-top: 2px;
+        }
+
+        .sub-lines li {
+            margin-bottom: 2.5px;
+        }
+
+        .page-break {
+            break-before: page;
+            page-break-before: always;
+        }
+
+        @media screen {
+            body {
+                background: #eef1f5;
+                padding: 24px 12px;
+            }
+
+            .cv-container {
+                background: #ffffff;
+                padding: 18mm 20mm;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- HEADER -->
+        <header class="cv-header">
+            <h1 class="cv-name">Loi Hoang Nguyen</h1>
+            <div class="cv-role">Intern / Junior Mobile Developer (React Native)</div>
+            <div class="cv-contact-line">Phone: 0584.085.384</div>
+            <div class="cv-contact-line">Email: <a href="mailto:shenjohnsons11@gmail.com">shenjohnsons11@gmail.com</a></div>
+            <div class="cv-contact-line">GitHub: <a href="https://github.com/shenjohnsons11">https://github.com/shenjohnsons11</a></div>
+            <div class="cv-contact-line">LinkedIn: <a href="https://www.linkedin.com/in/loihoang">https://www.linkedin.com/in/loihoang</a></div>
+        </header>
+
+        <!-- SUMMARY -->
+        <section class="cv-section">
+            <h2 class="section-heading">SUMMARY</h2>
+            <p class="summary-p">
+                I'm a Cross-Platform Mobile Development graduate from FPT Polytechnic with hands-on internship experience in React Native CLI, and practical project experience with React Native (Expo SDK), Node.js, and RESTful APIs.
+            </p>
+            <p class="summary-p">
+                I focus on writing clean, readable mobile UI code and understanding how features work end-to-end from backend to client. I'm comfortable collaborating in a team, breaking down tasks by module, reviewing pull requests, and iterating quickly from mentor and user feedback.
+            </p>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section class="cv-section">
+            <h2 class="section-heading">TECHNICAL SKILLS</h2>
+            <div class="skills-columns">
+                <div>
+                    <ul class="skill-cat-list">
+                        <li class="skill-cat-item">
+                            <span class="skill-cat-title">Mobile &amp; Frontend:</span>
+                            <ul class="skill-sublist">
+                                <li>React Native (CLI &amp; Expo SDK)</li>
+                                <li>React Navigation (Stack / Tab)</li>
+                                <li>FlatList optimization, Flexbox</li>
+                                <li>React.js, Next.js, HTML5, CSS3, Tailwind CSS</li>
+                            </ul>
+                        </li>
+                        <li class="skill-cat-item">
+                            <span class="skill-cat-title">Programming Languages:</span>
+                            <ul class="skill-sublist">
+                                <li>JavaScript (ES6+), TypeScript</li>
+                                <li>Java (Core, OOP, Swing), SQL, Python</li>
+                            </ul>
+                        </li>
+                        <li class="skill-cat-item">
+                            <span class="skill-cat-title">Backend &amp; Databases:</span>
+                            <ul class="skill-sublist">
+                                <li>Node.js, Express.js (RESTful APIs)</li>
+                                <li>MongoDB (Mongoose), MySQL, SQLite3, MS SQL Server</li>
+                                <li>Socket.io, JWT Auth, Axios, VietQR / Gemini API</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="skill-cat-list">
+                        <li class="skill-cat-item">
+                            <span class="skill-cat-title">Version Control &amp; Tools:</span>
+                            <ul class="skill-sublist">
+                                <li>Git, GitHub (Branching, Pull Requests)</li>
+                                <li>Postman, Android Studio, VS Code</li>
+                                <li>Draw.io (ERD, Use Case), macOS</li>
+                            </ul>
+                        </li>
+                        <li class="skill-cat-item">
+                            <span class="skill-cat-title">Foreign Languages:</span>
+                            <ul class="skill-sublist">
+                                <li>English: Good technical documentation reading and comprehension</li>
+                            </ul>
+                        </li>
+                        <li class="skill-cat-item">
+                            <span class="skill-cat-title">Engineering &amp; Soft Skills:</span>
+                            <ul class="skill-sublist">
+                                <li>Physical device testing (Android / iOS) &amp; APK builds</li>
+                                <li>Agile/Scrum teamwork &amp; task coordination</li>
+                                <li>Troubleshooting &amp; problem-solving</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="cv-section">
+            <h2 class="section-heading">EDUCATION</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-org">FPT Polytechnic College (Ho Chi Minh City)</span>
+                    <span class="entry-date">2023 – 08/2026</span>
+                </div>
+                <ul class="bullet-list">
+                    <li>Major: Cross-Platform Mobile Development (Graduated).</li>
+                    <li>Completed practical coursework in React Native, Java OOP, relational databases, and Agile/Scrum team workflows.</li>
+                    <li>Built and defended the TroHub Capstone Project (cross-platform room rental management application).</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-org">NTT Institute of International Education – NIIE (Previous Study)</span>
+                    <span class="entry-date">2017 – 2021</span>
+                </div>
+                <ul class="bullet-list">
+                    <li>Completed foundational Information Technology coursework in an English-instruction environment before transitioning to hands-on software training at FPT Polytechnic.</li>
+                    <li>Developed technical English reading habits and foundational teamwork skills.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PAGE 2: PROFESSIONAL EXPERIENCE & PROJECTS -->
+        <section class="cv-section page-break">
+            <h2 class="section-heading">PROFESSIONAL EXPERIENCE</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-org">ClinicPro Co., Ltd.</span>
+                    <span class="entry-date">05/2026 – 07/2026</span>
+                </div>
+                <div class="entry-meta"><strong>Position:</strong> Front-end Mobile Developer Intern</div>
+                <div class="entry-meta"><strong>Project:</strong> Clinic Management &amp; Appointment Mobile App</div>
+                <ul class="bullet-list">
+                    <li><strong>Project Description:</strong> A cross-platform healthcare mobile app for appointment booking, doctor directory lookup, electronic medical records (EMR), and medicine cart management.</li>
+                    <li><strong>Responsibilities:</strong>
+                        <ul class="sub-lines">
+                            <li>Built UI screens and navigation flows (authentication, doctor/specialty lists, booking/cancellation forms, EMR views, medicine cart) using React Native CLI, Flexbox, and React Navigation (Stack/Tab).</li>
+                            <li>Integrated Node.js/MySQL RESTful APIs via Axios, handled loading and error states, implemented search/filter/sort features, and optimized list rendering with FlatList.</li>
+                            <li>Tested across physical Android (including older devices and notch screens) and iOS devices, monitored memory usage, and packaged test/release APKs.</li>
+                            <li>Iterated on UI/UX layouts based on mentor code reviews and feedback from clinic doctors and users.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-org">Ship Tot One Member LLC</span>
+                    <span class="entry-date">01/2021 – 06/2024</span>
+                </div>
+                <div class="entry-meta"><strong>Position:</strong> Technical Support &amp; Operations Coordinator</div>
+                <ul class="bullet-list">
+                    <li><strong>Responsibilities:</strong>
+                        <ul class="sub-lines">
+                            <li>Provided technical support and troubleshooting for day-to-day software issues within the company's logistics operation system.</li>
+                            <li>Managed operational data and delivery workflows, maintaining data accuracy under tight timelines.</li>
+                            <li>Collaborated across teams to diagnose bottlenecks and resolve system or process issues.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="cv-section">
+            <h2 class="section-heading">PROJECTS</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-org">TroHub – Boarding House Management System (Capstone Project)</span>
+                    <span class="entry-date">05/2026 – 08/2026</span>
+                </div>
+                <div class="entry-meta"><strong>Role:</strong> Mobile Developer (React Native) &amp; Team Coordinator | <strong>Team Size:</strong> 5</div>
+                <ul class="bullet-list">
+                    <li><strong>Project Description:</strong> A cross-platform application helping landlords and tenants manage rooms, digital contracts, utility billing, and VietQR payments across mobile and web.</li>
+                    <li><strong>Responsibilities:</strong>
+                        <ul class="sub-lines">
+                            <li>Built core mobile screens and user flows using React Native (Expo SDK) with Light/Dark theme support across 8 functional modules aligned with the Next.js WebAdmin.</li>
+                            <li>Implemented utility meter scanning via Expo Camera and integrated Google Gemini API as an assistant for landlord workflows.</li>
+                            <li>Contributed to Node.js/Express/MongoDB RESTful APIs (JWT auth, Landlord/Tenant roles, Socket.io notifications, VietQR payments).</li>
+                            <li>Drafted the initial ERD, documented shared coding conventions, split tasks by module, and reviewed Pull Requests before merging.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-org">ReadVibe – E-book Store Mobile App (Coursework Project)</span>
+                    <span class="entry-date">2025</span>
+                </div>
+                <div class="entry-meta"><strong>Tech Stack:</strong> React Native (Expo), Context API, REST API</div>
+                <ul class="bullet-list">
+                    <li>Built core e-commerce mobile screens including catalog browsing, product filtering, search, and shopping cart management.</li>
+                    <li>Optimized rendering performance for large book lists using React Native FlatList and connected RESTful APIs for data synchronization.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-org">Social Post Curator &amp; Chrome Extension (Personal Project)</span>
+                    <span class="entry-date">09/2026 – 11/2026</span>
+                </div>
+                <div class="entry-meta"><strong>Tech Stack:</strong> Python, SQLite3, Chrome Extensions API, OpenAI / Gemini API</div>
+                <ul class="bullet-list">
+                    <li>Built a local-first archiving tool with Python/SQLite3 and a paired Chrome Extension to save social posts locally, supporting optional AI summarization and keyword search.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PASTIMES AND ACTIVITIES -->
+        <section class="cv-section">
+            <h2 class="section-heading">ACTIVITIES &amp; LINKS</h2>
+            <ul class="bullet-list">
+                <li>Source code and personal projects are maintained on GitHub: <a href="https://github.com/shenjohnsons11">https://github.com/shenjohnsons11</a></li>
+                <li>Enjoy reading clean code and mobile engineering articles, building small productivity tools, and practicing React Native performance optimization.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
+

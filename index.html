@@ -75,10 +75,16 @@
             </li>
         </ul>
 
-        <!-- Nút chuyển đổi ngôn ngữ VIE / ENG -->
-        <div class="lang-switch" role="group" aria-label="Language switcher">
-            <button type="button" class="lang-btn active" data-lang="vi">VIE</button>
-            <button type="button" class="lang-btn" data-lang="en">ENG</button>
+        <!-- Nút chuyển đổi giao diện (Auto theo giờ / Light / Dark) & Ngôn ngữ (VIE / ENG) -->
+        <div class="sidebar-controls">
+            <button type="button" id="themeToggle" class="theme-btn" aria-label="Chế độ sáng/tối">
+                <i class="fa-solid fa-clock"></i>
+                <span class="theme-label">AUTO</span>
+            </button>
+            <div class="lang-switch" role="group" aria-label="Language switcher">
+                <button type="button" class="lang-btn active" data-lang="vi">VIE</button>
+                <button type="button" class="lang-btn" data-lang="en">ENG</button>
+            </div>
         </div>
     </nav>
 
@@ -133,7 +139,7 @@
                     <!-- Ảnh chân dung / Avatar -->
                     <div class="about-avatar-card">
                         <div class="avatar-wrapper">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Lợi Hoàng Nguyên Avatar" class="avatar-img">
+                            <img src="assets/avatar.jpg" alt="Lợi Hoàng Nguyên Avatar" class="avatar-img">
                         </div>
                         <div class="avatar-badge">
                             <span class="badge-exp">Intern / Junior</span>
@@ -194,6 +200,13 @@
                                 </div>
                             </li>
                             <li>
+                                <div class="icon-box"><i class="fa-solid fa-comment-dots"></i></div>
+                                <div>
+                                    <span class="c-label">Zalo:</span>
+                                    <span class="c-val"><a href="https://zalo.me/0584085384" target="_blank" rel="noopener">0584.085.384</a></span>
+                                </div>
+                            </li>
+                            <li>
                                 <div class="icon-box"><i class="fa-brands fa-github"></i></div>
                                 <div>
                                     <span class="c-label">GitHub:</span>
@@ -226,6 +239,9 @@
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-role">
+                            <div class="org-logo-badge">
+                                <img src="assets/logoclinic.png" alt="ClinicPro Logo" class="org-logo-img">
+                            </div>
                             <h3 class="role-title" data-i18n="work.w1.role">Thực tập sinh Mobile Developer (Front-end)</h3>
                             <h4 class="company-name" data-i18n="work.w1.company">Công ty TNHH ClinicPro</h4>
                             <span class="badge badge-primary" data-i18n="work.w1.badge">Thực Tập Doanh Nghiệp</span>
@@ -422,7 +438,9 @@
                             <div class="school-header">
                                 <h3 class="edu-degree" data-i18n="edu.e1.degree">Chuyên ngành Lập trình Mobile đa nền tảng</h3>
                                 <div class="school-brand">
-                                    <span class="school-logo fpt-logo">FPT</span>
+                                    <span class="school-logo-wrap">
+                                        <img src="assets/logofpt.png" alt="FPT Polytechnic Logo" class="school-logo-img school-logo-fpt">
+                                    </span>
                                     <h4 class="edu-school" data-i18n="edu.e1.school">Trường Cao đẳng FPT Polytechnic</h4>
                                 </div>
                             </div>
@@ -445,7 +463,9 @@
                             <div class="school-header">
                                 <h3 class="edu-degree" data-i18n="edu.e2.degree">Chương trình Đào tạo Quốc tế (Ngành CNTT)</h3>
                                 <div class="school-brand">
-                                    <span class="school-logo niie-logo">NIIE</span>
+                                    <span class="school-logo-wrap">
+                                        <img src="assets/logoniie.jpeg" alt="NIIE Logo" class="school-logo-img school-logo-niie">
+                                    </span>
                                     <h4 class="edu-school" data-i18n="edu.e2.school">NIIE - Viện Đào Tạo Quốc Tế (ĐH Nguyễn Tất Thành)</h4>
                                 </div>
                             </div>
@@ -479,6 +499,14 @@
                             <div>
                                 <h4 data-i18n="contact.emailLabel">Email cá nhân</h4>
                                 <p><a href="mailto:shenjohnsons11@gmail.com">shenjohnsons11@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="c-item">
+                            <i class="fa-solid fa-comment-dots"></i>
+                            <div>
+                                <h4>Zalo</h4>
+                                <p><a href="https://zalo.me/0584085384" target="_blank" rel="noopener">0584.085.384</a></p>
                             </div>
                         </div>
 
@@ -535,9 +563,9 @@
                 <div class="footer-socials">
                     <a href="https://github.com/shenjohnsons11" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                     <a href="mailto:shenjohnsons11@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://zalo.me/0584085384" target="_blank" rel="noopener" aria-label="Zalo"><i class="fa-solid fa-comment-dots"></i></a>
                     <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <p class="credit" data-i18n="footer.credit">Layout tham khảo từ cv.toidicodedao.com.</p>
             </div>
         </footer>
 

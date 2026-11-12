@@ -177,8 +177,7 @@ const translations = {
         'form.msgPlaceholder': 'Thông tin công việc hoặc lịch hẹn phỏng vấn...',
         'form.submit': 'Gửi tin nhắn',
         'form.alert': 'Cảm ơn bạn đã để lại lời nhắn! Nguyên sẽ phản hồi qua email trong thời gian sớm nhất.',
-        'footer.name': 'Lợi Hoàng Nguyên',
-        'footer.credit': 'Layout tham khảo từ cv.toidicodedao.com.'
+        'footer.name': 'Lợi Hoàng Nguyên'
     },
     en: {
         pageTitle: 'Loi Hoang Nguyen - Mobile Developer (Intern / Junior) CV',
@@ -287,8 +286,7 @@ const translations = {
         'form.msgPlaceholder': 'Job details or interview schedule...',
         'form.submit': 'Send Message',
         'form.alert': 'Thanks for your message! I will get back to you via email as soon as possible.',
-        'footer.name': 'Loi Hoang Nguyen',
-        'footer.credit': 'Layout inspired by cv.toidicodedao.com.'
+        'footer.name': 'Loi Hoang Nguyen'
     }
 };
 
@@ -332,7 +330,86 @@ function applyLanguage(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
+
+    if (typeof updateThemeUI === 'function') {
+        updateThemeUI();
+    }
 }
+
+// ==========================================================================
+// DARK / LIGHT MODE THEO THỜI GIAN THỰC (06:00-17:59 LIGHT, 18:00-05:59 DARK)
+// ==========================================================================
+const themeToggleBtn = document.getElementById('themeToggle');
+let themeMode = localStorage.getItem('cv_theme_mode') || 'auto'; // 'auto' | 'light' | 'dark'
+
+function getRealtimeTheme() {
+    const hour = new Date().getHours();
+    return hour >= 6 && hour < 18 ? 'light' : 'dark';
+}
+
+function getResolvedTheme() {
+    return themeMode === 'auto' ? getRealtimeTheme() : themeMode;
+}
+
+function updateThemeUI() {
+    const resolved = getResolvedTheme();
+    document.documentElement.setAttribute('data-theme', resolved);
+
+    if (!themeToggleBtn) return;
+    const icon = themeToggleBtn.querySelector('i');
+    const label = themeToggleBtn.querySelector('.theme-label');
+
+    if (themeMode === 'auto') {
+        icon.className = 'fa-solid fa-clock';
+        label.textContent = 'AUTO';
+        themeToggleBtn.title = currentLang === 'vi'
+            ? `Tự động theo giờ (${resolved === 'dark' ? 'Tối' : 'Sáng'}) — Bấm để đổi`
+            : `Auto by time (${resolved}) — Click to switch`;
+    } else if (themeMode === 'dark') {
+        icon.className = 'fa-solid fa-moon';
+        label.textContent = 'DARK';
+        themeToggleBtn.title = currentLang === 'vi' ? 'Chế độ Tối — Bấm để đổi' : 'Dark Mode — Click to switch';
+    } else {
+        icon.className = 'fa-solid fa-sun';
+        label.textContent = 'LIGHT';
+        themeToggleBtn.title = currentLang === 'vi' ? 'Chế độ Sáng — Bấm để đổi' : 'Light Mode — Click to switch';
+    }
+}
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        if (themeMode === 'auto') {
+            themeMode = getRealtimeTheme() === 'light' ? 'dark' : 'light';
+        } else if (themeMode === 'dark') {
+            themeMode = getRealtimeTheme() === 'light' ? 'light' : 'auto';
+        } else {
+            themeMode = 'auto';
+        }
+        localStorage.setItem('cv_theme_mode', themeMode);
+        updateThemeUI();
+    });
+}
+
+updateThemeUI();
+setInterval(() => {
+    if (themeMode === 'auto') {
+        updateThemeUI();
+    }
+}, 30000);
+
+// ==========================================================================
+// HIỆU ỨNG SPOTLIGHT RÊ CHUỘT TRÊN CÁC THẺ NỘI DUNG
+// ==========================================================================
+const spotlightCards = document.querySelectorAll(
+    '.about-avatar-card, .about-summary-card, .about-contact-card, .skill-box, .timeline-item, .edu-card, .contact-form'
+);
+spotlightCards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+    });
+});
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
