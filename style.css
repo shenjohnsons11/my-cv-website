@@ -800,6 +800,118 @@ img {
     top: -3px;
 }
 
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.project-shot {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--bg-light);
+    text-decoration: none;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.project-shot:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(26, 188, 156, 0.16);
+    border-color: var(--primary-color);
+}
+
+.project-shot-img-wrap {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background: #eef4f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-theme="dark"] .project-shot-img-wrap {
+    background: #131c26;
+}
+
+.project-shot-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.3s ease;
+}
+
+.project-shot:hover .project-shot-img-wrap img {
+    transform: scale(1.04);
+}
+
+.project-shot-caption {
+    padding: 8px 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    line-height: 1.3;
+    border-top: 1px solid var(--border-color);
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.project-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-link-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(26, 188, 156, 0.28);
+}
+
+.project-link-btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.project-link-btn-outline:hover {
+    background: var(--bg-light);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .project-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
 .link-highlight {
     color: var(--primary-dark);
     font-weight: 600;
