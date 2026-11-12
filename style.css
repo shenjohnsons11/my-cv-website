@@ -1420,6 +1420,10 @@ body,
 /* ==========================================================================
    9.8. CV PDF MODAL (CHỌN XEM CV VI / EN)
    ========================================================================== */
+.cv-modal[hidden] {
+    display: none !important;
+}
+
 .cv-modal {
     position: fixed;
     inset: 0;
@@ -1677,7 +1681,11 @@ body,
     #contact,
     .site-footer,
     .back-to-top,
-    .cv-modal {
+    .cv-modal[hidden] {
+    display: none !important;
+}
+
+.cv-modal {
         display: none !important;
     }
 

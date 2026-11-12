@@ -453,7 +453,10 @@ const modalPrintQuickBtn = document.getElementById('modalPrintQuickBtn');
 
 function openCvModal() {
     if (cvModal) {
-        cvModal.classList.add('active');
+        cvModal.hidden = false;
+        requestAnimationFrame(() => {
+            cvModal.classList.add('active');
+        });
         cvModal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
     }
@@ -463,6 +466,7 @@ function closeCvModal() {
     if (cvModal) {
         cvModal.classList.remove('active');
         cvModal.setAttribute('aria-hidden', 'true');
+        cvModal.hidden = true;
         document.body.style.overflow = '';
     }
 }
